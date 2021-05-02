@@ -6,17 +6,16 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface BookMapper {
-    //增
+    //增加书籍
     int addBook(Books books);
-    //删
+    //删删除
     int deleteBookById(@Param("bookId") int id);
-    //改
+    //更改书籍
     int updateBook(Books books);
-    //查
+    //根据id查询书籍
     Books queryBookById(@Param("bookId") int id);
-    //查询所有
+    //查询所有书籍
     List<Books> queryAllBook();
-
     //查询书籍名称
     Books queryBookByName(@Param("bookName") String bookName);
 }
